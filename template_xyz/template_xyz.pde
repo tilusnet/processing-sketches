@@ -3,6 +3,7 @@ int H = 600;
 int pHSize = H/4; 
 
 PShape planeX, planeY, planeZ;
+int planeAlpha = 64;
 
 void setup() {
   size(W, H, P3D);
@@ -32,7 +33,7 @@ void draw() {
 PShape genPlaneX() {
   PShape p = createShape(QUADS);
   color c = #FF0000;
-  p.fill(c, 64);
+  p.fill(c, planeAlpha);
   p.stroke(c);
   p.vertex(0, -pHSize, -pHSize);
   p.vertex(0, -pHSize,  pHSize);
@@ -46,7 +47,7 @@ PShape genPlaneX() {
 PShape genPlaneY() {
   PShape p = createShape(QUADS);
   color c = #00FF00;
-  p.fill(c, 64);
+  p.fill(c, planeAlpha);
   p.stroke(c);
   p.vertex(-pHSize, 0, -pHSize);
   p.vertex(-pHSize, 0,  pHSize);
@@ -60,7 +61,7 @@ PShape genPlaneY() {
 PShape genPlaneZ() {
   PShape p = createShape(QUADS);
   color c = #0000FF;
-  p.fill(c, 64);
+  p.fill(c, planeAlpha);
   p.stroke(c);
   p.vertex(-pHSize, -pHSize, 0);
   p.vertex(-pHSize,  pHSize, 0);
